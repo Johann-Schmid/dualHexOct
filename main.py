@@ -8,7 +8,7 @@ def printHexDualOct(inputNumber):
     print(f'Oct {oct(inputNumber)}');
     print(f'Hex {hex(inputNumber)}');
 
-def saveFile(numberInput):
+def saveFileBinary(numberInput):
     filename = "binary_file.bin"  # The filename to save the binary data to
     num = int(numberInput)
     # Convert the string to binary data
@@ -20,6 +20,15 @@ def saveFile(numberInput):
 
     print(f"The number '{numberInput}' has been saved as binary data to '{filename}'.")
 
+def saveFileText(numberInput):
+    filename = "binary_file.bin"  # The filename to save the binary data to
+
+    # Write the binary data to a file
+    with open(filename, "w") as file:
+        file.write(numberInput)
+
+    print(f"The number '{numberInput}' has been saved as binary data to '{filename}'.")
+
 
 
 
@@ -27,6 +36,7 @@ def saveFile(numberInput):
 if __name__ == '__main__':
     number = input('Enter a number: ');
     #printHexDualOct(int(number));
-    saveFile(number);
+    #saveFileBinary(number);
+    saveFileText(number);
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
