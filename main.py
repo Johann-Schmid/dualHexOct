@@ -11,7 +11,7 @@ def printHexDualOct(inputNumber):
     print(f'Hex {hex(inputNumber)}');
 
 def saveFileBinary(numberInput):
-    filename = "binary_file.bin"  # The filename to save the binary data to
+    filename = "binary_file4.bin"  # The filename to save the binary data to
     num = int(numberInput)
     # Convert the string to binary data
     binary_data = num.to_bytes(1, byteorder='big')
@@ -23,7 +23,7 @@ def saveFileBinary(numberInput):
     print(f"The number '{numberInput}' has been saved as binary data to '{filename}'.")
 
 def saveFileText(numberInput):
-    filename = "binary_file.bin"  # The filename to save the binary data to
+    filename = "binary_file5.bin"  # The filename to save the binary data to
 
     # Write the binary data to a file
     with open(filename, "w") as file:
@@ -69,10 +69,10 @@ def plot():
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    #number = input('Enter a number: ');
+    number = input('Enter a number: ');
     #printHexDualOct(int(number));
     #saveFileBinary(number);
-    #saveFileText(number);
-    plot();
+    saveFileText(number);
+    #plot();
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
